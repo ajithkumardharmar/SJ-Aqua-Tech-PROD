@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Admin Login')}"></head>
+<body>
+<main class="container section form-wrap"><h2>Admin Login</h2>
+    <div class="alert alert-danger" th:if="${param.error}">Invalid username or password.</div>
+    <form th:action="@{/admin/login}" method="post">
+        <div class="mb-3"><label>Username</label><input class="form-control" name="username" required></div>
+        <div class="mb-3"><label>Password</label><input class="form-control" type="password" name="password" required>
+        </div>
+        <button class="btn btn-aqua">Login</button>
+    </form>
+    <a th:href="@{/}">Back to website</a></main>
+</body>
+</html>

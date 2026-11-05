@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('About Us | SJ Aqua Tech')}"></head>
+<body>
+<div th:replace="~{fragments/header :: nav}"></div>
+<main>
+  <section class="about-hero">
+    <div class="container about-hero-inner">
+      <span class="eyebrow">WHO WE ARE</span>
+      <h1>Pure water. <span>Better living.</span></h1>
+      <p>We believe every home, workplace and community deserves access to water they can trust.</p>
+      <a class="btn btn-aqua btn-lg" th:href="@{/products}">Explore our solutions <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+  <section class="container section about-intro">
+    <div class="about-kicker">THE SJ AQUA TECH PROMISE</div>
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6"><h2 class="display-heading">Water is more than a necessity. It is the beginning of a healthier tomorrow.</h2></div>
+      <div class="col-lg-6"><p class="about-copy">At SJ Aqua Tech, our purpose is simple: make dependable water purification easier to access, understand and maintain. We help families and businesses find practical RO water solutions, supported by thoughtful guidance and service they can count on.</p><p class="about-copy">From choosing the right purifier to keeping it performing at its best, we put people, reliability and long-term value at the centre of every decision.</p></div>
+    </div>
+  </section>
+  <section class="purpose-section">
+    <div class="container section">
+      <div class="section-heading"><span class="eyebrow">OUR PURPOSE & PROMISE</span><h2>Driven by a clear purpose</h2><p>Every drop matters. Every customer matters. Every day is an opportunity to do better.</p></div>
+      <div class="row g-4">
+        <div class="col-md-6"><article class="purpose-card mission-card"><div class="purpose-icon">◎</div><span class="purpose-label">OUR MISSION</span><h3>Make clean water a confidence, not a concern.</h3><p>Our mission is to deliver reliable, efficient and affordable water purification solutions that protect everyday wellbeing. We aim to serve every customer with honesty, expert guidance and responsive support—building trust through the quality of our products and the care behind our service.</p><div class="purpose-foot">Quality in every drop. Care in every connection.</div></article></div>
+        <div class="col-md-6"><article class="purpose-card vision-card"><div class="purpose-icon">✧</div><span class="purpose-label">OUR VISION</span><h3>A future where pure water is within everyone's reach.</h3><p>Our vision is to become a trusted name in water purification by continuously improving our solutions, embracing responsible practices and creating lasting customer relationships. We aspire to help build healthier homes, stronger businesses and communities that can look forward to a cleaner, brighter future.</p><div class="purpose-foot">Think beyond today. Create a healthier tomorrow.</div></article></div>
+      </div>
+    </div>
+  </section>
+  <section class="container section values-section">
+    <div class="section-heading"><span class="eyebrow">WHAT GUIDES US</span><h2>Values that flow through everything</h2></div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3"><div class="value-card"><span>01</span><h3>Trust</h3><p>Honest recommendations and transparent service, always.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="value-card"><span>02</span><h3>Quality</h3><p>Careful attention to performance, reliability and detail.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="value-card"><span>03</span><h3>People first</h3><p>Listening closely and finding solutions that fit real needs.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="value-card"><span>04</span><h3>Progress</h3><p>Learning, improving and moving towards a better tomorrow.</p></div></div>
+    </div>
+  </section>
+  <section class="about-cta"><div class="container"><div><span class="eyebrow">LET'S MAKE EVERY DROP COUNT</span><h2>Ready to find the right water solution?</h2><p>Talk to our team. We would be happy to help you take the next step.</p></div><a class="btn btn-aqua btn-lg" th:href="@{/contact}">Talk to our team →</a></div></section>
+</main>
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body></html>

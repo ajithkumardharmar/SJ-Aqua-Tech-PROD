@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<footer th:fragment="footer">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-6"><h4>SJ AQUA TECH</h4>
+                <p>Address: No - 140, GOWTHAM COMPLEX, Gandhi Rd, near by poorvika mobiles & Apollo pharmacy, Nenmeli, Sriperumbudur, Tamil Nadu 602105
+                    </p>
+                <p>Phone: 095853 53578</p>
+            </div>
+            <div class="col-md-3"><h5>Quick Links</h5>
+                <p><a th:href="@{/about}">About</a><br><a th:href="@{/products}">Products</a><br><a
+                        th:href="@{/booking}">Book Service</a></p></div>
+            <div class="col-md-3"><h5>Contact</h5>
+                <p>Update your phone, email and address here.</p></div>
+        </div>
+        <hr>
+        <small>© 2026 SJ Aqua Tech. All rights reserved.</small></div>
+</footer>
+</body>
+</html>

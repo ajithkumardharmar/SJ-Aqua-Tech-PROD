@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('SJ Aqua Tech | Pure Water Solutions')}"></head>
+<body>
+<div th:replace="~{fragments/header :: nav}"></div>
+<header class="hero">
+    <div class="container">
+        <div class="hero-copy"><span class="eyebrow">SMART WATER. HEALTHY LIVING.</span>
+            <h1>Pure Water for<br><span>Better Living.</span></h1>
+            <p>Trusted domestic and commercial RO water purification solutions, installation and service support.</p><a
+                    class="btn btn-aqua" th:href="@{/booking}">Book a Service</a> <a class="btn btn-outline-light"
+                                                                                     th:href="@{/products}">Explore
+                Products</a></div>
+    </div>
+</header>
+<main>
+    <section class="container section">
+        <div class="section-heading"><span class="eyebrow">WHAT WE DO</span>
+            <h2>Water solutions for every need</h2>
+            <p>From your home kitchen to commercial operations, find the right purification solution.</p></div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="icon">⌂</div>
+                    <h3>Domestic RO</h3>
+                    <p>Purification solutions designed for everyday family use.</p></div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="icon">▦</div>
+                    <h3>Commercial RO</h3>
+                    <p>Scalable water treatment systems for businesses.</p></div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="icon">✦</div>
+                    <h3>Service & Repair</h3>
+                    <p>Installation, maintenance and filter replacement support.</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="product-band">
+        <div class="container section">
+            <div class="section-heading"><span class="eyebrow">OUR PRODUCTS</span>
+                <h2>Explore our RO range</h2></div>
+            <div class="row g-4">
+                <div class="col-md-4" th:each="p : ${products}">
+                    <div class="product-card"><img th:if="${p.imageUrl != null and !p.imageUrl.isBlank()}"
+                                                   th:src="${p.imageUrl}" alt="Product">
+                        <div class="product-info"><h5 th:text="${p.name}"></h5>
+                            <p th:text="${p.description}"></p><a th:href="@{/products/{id}(id=${p.id})}">View details
+                                →</a></div>
+                    </div>
+                </div>
+                <div class="col-12" th:if="${#lists.isEmpty(products)}"><p class="text-center">Our products will be
+                    listed here soon. Please contact us for details.</p></div>
+            </div>
+            <div class="text-center mt-4"><a class="btn btn-aqua" th:href="@{/products}">View All Products</a></div>
+        </div>
+    </section>
+    <section class="container section cta"><h2>Need help choosing an RO system?</h2>
+        <p>Tell us what you need. Our team can help you find a suitable solution.</p><a class="btn btn-aqua"
+                                                                                        th:href="@{/contact}">Talk to
+            Our Team</a></section>
+</main>
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>

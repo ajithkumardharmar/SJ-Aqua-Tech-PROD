@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Products | SJ Aqua Tech')}"></head>
+<body>
+<div th:replace="~{fragments/header :: nav}"></div>
+<main class="container section"><span class="eyebrow">PRODUCT CATALOGUE</span>
+    <h1>Our Products</h1>
+    <div class="row g-4 mt-2">
+        <div class="col-md-4" th:each="p : ${products}">
+            <div class="product-card h-100"><img th:if="${p.imageUrl != null and !p.imageUrl.isBlank()}"
+                                                 th:src="${p.imageUrl}" alt="Product">
+                <div class="product-info"><h5 th:text="${p.name}"></h5>
+                    <p th:text="${p.description}"></p>
+                    <p class="fw-bold" th:if="${p.price != null}" th:text="'₹' + ${p.price}"></p><a
+                            th:href="@{/products/{id}(id=${p.id})}">View details →</a></div>
+            </div>
+        </div>
+        <div class="col-12" th:if="${#lists.isEmpty(products)}"><p>No products added yet. Admin can add products from
+            the dashboard.</p></div>
+    </div>
+</main>
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
